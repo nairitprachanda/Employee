@@ -9,14 +9,13 @@ namespace Wagestill100hrsOR20days
         public const int IS_PART_TIME = 1;
         public const int IS_FULL_TIME = 2;
         public const int EMP_RATE_PER_HOUR = 20;
-        public const int NUM_OF_WORKING_DAYS = 2;
-        public const int MAX_HRS_IN_MONTH = 10;
+        public const int NUM_OF_WORKING_DAYS = 20;
+        public const int MAX_HRS_IN_MONTH = 100;
         static void Main(string[] args)
         {
             int empHrs = 0;
             int totalEmpHrs = 0;
             int overallWorkingDays = 0;
-
             while (totalEmpHrs <= MAX_HRS_IN_MONTH && overallWorkingDays < NUM_OF_WORKING_DAYS)
             {
                 overallWorkingDays++;
@@ -34,7 +33,6 @@ namespace Wagestill100hrsOR20days
                         empHrs = 0;
                         break;
                 }
-
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Days: " + overallWorkingDays + "  Emp Hours : " + empHrs);
             }
